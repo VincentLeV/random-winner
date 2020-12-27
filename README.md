@@ -1,7 +1,7 @@
 # Random Winner
 
-This is a mini-game for parties when you need to randomly choose a winner/person among the players/people in the parties. :smirk:
-If you like this game, please give me a star
+This is a mini-game for parties when you need to randomly choose a winner/person among the players/people in the parties. :smirk:\
+If you like this game, please give me a star.
 
 ## Technology used
 
@@ -25,9 +25,9 @@ This game is built with
 
 ## Demo
 
-Check out my [Codepen](https://codepen.io/vincentle/pen/gOwXygj) link for demo :grin:.
+Check out my [Codepen](https://codepen.io/vincentle/full/gOwXygj) link for demo :grin:.
 
 ## License
 
-This project is licensed under the terms of the [MIT](/LICENSE.txt) license.
+This project is licensed under the terms of the [MIT](/LICENSE.txt) license.\
 MIT © [Vincent Le]("https://www.vincentle.me/").
