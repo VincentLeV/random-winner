@@ -29,5 +29,5 @@ Check out my [Codepen](https://codepen.io/vincentle/full/gOwXygj) link for demo 
 
 ## License
 
-This project is licensed under the terms of the [MIT](/LICENSE.txt) license.\
+This project is licensed under the terms of the [MIT](/LICENSE) license.\
 MIT © [Vincent Le]("https://www.vincentle.me/").
