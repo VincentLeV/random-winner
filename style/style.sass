@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap')
+
+$phone-width: 600px
+$tablet-width: 601px
+$tablet-height: 768px
+$desktop-width: 1025px
+$desktop-width-2: 1367px
+
+@mixin orientation($direction)
+    $orientation-landscape: "(orientation:landscape)"
+    $orientation-portrait: "(orientation:portrait)"
+    @if $direction == landscape
+        @media #{$orientation-landscape}
+        @content
+    @if $direction == portrait
+        @media #{$orientation-portrait}
+        @content
+
+@mixin phone
+    @media (max-width: #{$phone-width})
+        @content
+
+$bg-c: #06D6A0
+$h1-s: 50px
+$shadow-c: rgba(255, 209, 102, 1)
+$button-c: #FFD166
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    text-decoration: none
+    &:focus
+        outline: none
+
+html, body, .page-wrapper
+    width: 100%
+    height: 100vh
+    font-family: "Montserrat", sans-serif
+
+.page-wrapper
+    width: 100%
+    height: 100vh
+    background: $bg-c
+    position: relative
+    display: flex
+
+.container
+    margin: auto auto
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    justify-content: space-around
+
+    h1
+        width: 100%
+        font-size: $h1-s
+        text-align: center
+        margin: 40px 0
+        @include phone
+            font-size: $h1-s - 22px
+
+.add-c, .draw-c, .clear-c
+    width: 100%
+    display: flex
+    flex-flow: row wrap
+    .button
+        background: $button-c
+        margin: 12px auto
+        width: 150px
+        height: 40px
+        font-weight: 700
+        font-size: $h1-s - 35px
+        border: none
+        box-shadow: 0px 15px 25px -15px rgba(0,0,0,0.8)
+        transition: 0.2s all ease
+        cursor: pointer
+        &:hover
+            transform: scale(1.1)
+
+.name-c
+    width: 100%
+    display: flex
+    margin-bottom: 30px
+    #name
+        width: 50%
+        height: 50px
+        margin: auto auto
+        border-radius: 20px
+        border: none
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5)
+        padding-left: 30px
+        font-size: 25px
+        transition: 0.3s all ease
+        @include phone
+            width: 70%
+            font-size: $h1-s - 28px
+        &:hover
+            box-shadow: 0px 0px 20px 0px $shadow-c
+            transform: scale(1.1)
+        &::placeholder
+            font-size: $h1-s - 32px
+            @include phone
+                font-size: $h1-s - 36px
+
+#print
+    background: #F2F2F2
+    width: 50%
+    margin: 20px 0
+    border: 5px double black
+    display: flex
+    flex-flow: row wrap
+    @include phone
+        width: 80%
+    #name-list, #result
+        width: 100%
+        margin: auto auto
+        padding: 20px 15px
+        text-align: center
+        line-height: 1.8
+        font-size: $h1-s - 25px
+        @include phone
+            font-size: $h1-s - 35px
+            line-height: 1.5
+            padding: 10px 0
+    #result
+        font-weight: bold
+
+footer
+    width: 100%
+    position: absolute
+    bottom: 0
+    left: 0
+    padding: 15px
+    font-size: 12px
+    text-align: center
+
+/* MY WEBSITE */
+.me
+    position: absolute
+    top: 2vh
+    right: 2vw
+    z-index: 100
+    cursor: pointer
+
+#myLogo
+    width: 45px
+    height: 45px
+    @include phone
+        width: 30px
+        height: 30px
